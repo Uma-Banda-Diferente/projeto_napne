@@ -1,9 +1,16 @@
+import Layout from "./components/Layout";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Login } from "./pages/Login";
+
 export function App() {
   return (
-    <main>
-      <h1>Meu Novo Projeto React</h1>
-      <p>Pronto para começar a codar!</p>
-    </main>
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route path="/" element={<Login/>}/>
+      </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
