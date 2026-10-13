@@ -1,13 +1,17 @@
 import Layout from "./components/Layout";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Login } from "./pages/Login";
+import { Home } from "./pages/Home";
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Layout/>}>
+      <Route element={<Layout />}>
         <Route path="/" element={<Login/>}/>
+      </Route>
+      <Route element={<Layout tipoHeader="avancado"/>}>
+        <Route path="/home" element={<Home/>}/>
       </Route>
       </Routes>
     </BrowserRouter>
