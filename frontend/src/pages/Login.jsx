@@ -8,7 +8,7 @@ export function Login () {
 
     return (
         <main className="flex-1 mx-auto px-4 py-6 justify-center">
-            <div className="flex block relative h-auto w-250 bg-white rounded-xl top-10">
+            <div className="flex relative h-auto w-250 bg-white rounded-xl top-10">
                 <SobreposicaoImagens/>
                 <div>
                     <div className="flex gap-4 justify-center items-center">
