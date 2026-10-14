@@ -9,10 +9,9 @@ export function Select({ lista, placeholder }) {
             className={`w-120 h-12 appearance-none border border-gray-300 rounded-lg p-2 pl-3 outline-none cursor-pointer ${
                 valor === "" ? "text-[#24a838]" : "text-gray-900"}`}>
             {placeholder && (<option value="" disabled hidden className="text-[#24a838]">{placeholder}</option>)}
-            {lista.map((item, index) => {
-                let textoFormatado = item.replaceAll("_", " ").replace(/^\w/, (c) => c.toUpperCase());
+            {Object.entries(lista).map(([index, item]) => {
                 return (
-                    <option key={index} value={item} className="text-gray-900">{textoFormatado}</option>
+                    <option key={index} value={item.valor} className="text-gray-900">{item.nome}</option>
                 );
             })}
         </select>

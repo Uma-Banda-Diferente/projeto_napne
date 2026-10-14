@@ -6,7 +6,16 @@ import olhoSenha from "../assets/eye.png";
 import olhoFechado from "../assets/eye-closed.png"
 
 export function Login () {
-    const lista2 = ['aluno', 'administrador'];
+    const tipoDePerfil = [
+        {
+            nome: 'Professor',
+            valor: 'professor'
+        },
+        {
+            nome: 'Administrador',
+            valor: 'administrador'
+        }
+    ];
     const [mostrarVisivel, setMostrarVisivel] = useState(false);
     function mostrarSenha(){
         setMostrarVisivel(!mostrarVisivel);
@@ -21,7 +30,7 @@ export function Login () {
                         <img src={simboloEntrar} alt="Simbolo de acesso ao sistema" className="w-12"/>
                         <p className="text-xl font-semibold">Acessar o sistema</p>
                     </div>
-                    <Select lista={lista2} placeholder="Selecione o tipo de perfil para entrar"/>
+                    <Select lista={tipoDePerfil} placeholder="Selecione o tipo de perfil para entrar"/>
                     <div className="mt-5">
                         <label htmlFor="email">E-mail</label>
                         <input type="email" name="email" id="email" className="w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
