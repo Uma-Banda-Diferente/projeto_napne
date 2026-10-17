@@ -23,26 +23,26 @@ export function Login () {
 
     return (
         <main className="flex-1 mx-auto px-4 py-6 justify-center">
-            <div className="flex relative h-auto w-250 bg-white rounded-xl top-10">
+            <div className="flex relative h-130 md:h-full w-120 md:w-260 bg-white rounded-xl top-2">
                 <SobreposicaoImagens/>
-                <div className="relative top-10 ml-5">
-                    <div className="flex gap-4 justify-center items-center relative right-37 mb-10">
+                <div className="relative top-10 ml-8 mr-8">
+                    <div className="flex gap-4 justify-center items-center relative right-24 md:right-[135px] mb-10">
                         <img src={simboloEntrar} alt="Simbolo de acesso ao sistema" className="w-12"/>
                         <p className="text-xl font-semibold">Acessar o sistema</p>
                     </div>
-                    <Select lista={tipoDePerfil} placeholder="Selecione o tipo de perfil para entrar"/>
+                    <Select lista={tipoDePerfil} placeholder="Selecione o tipo de perfil para entrar" className="md:w-120"/>
                     <div className="mt-5">
                         <label htmlFor="email">E-mail</label>
-                        <input type="email" name="email" id="email" className="w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
+                        <input type="email" name="email" id="email" className="w-105 md:w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
                     </div>
                     <div className="mt-5">
                         <label htmlFor="senha">Senha</label>
-                        <input type={mostrarVisivel ? "text" : "password"} name="senha" id="senha" className="w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
+                        <input type={mostrarVisivel ? "text" : "password"} name="senha" id="senha" className="w-105 md:w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
                         <div onClick={mostrarSenha} className="cursor-pointer">
-                            <img src={mostrarVisivel ? olhoFechado : olhoSenha} alt="Mostrar senha" className="w-8 relative left-[435px] bottom-[40px]"/>
+                            <img src={mostrarVisivel ? olhoFechado : olhoSenha} alt="Mostrar senha" className="w-8 relative left-[380px] md:left-[435px] bottom-[40px]"/>
                         </div>
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center mt-8">
                         <button className="bg-[#24a838] text-white text-lg font-semibold w-70 p-2 mt-5 rounded-full cursor-pointer">Entrar</button>
                     </div>
                 </div>
