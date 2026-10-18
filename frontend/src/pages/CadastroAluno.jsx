@@ -18,12 +18,12 @@ export function CadastroAluno() {
                 <form className="flex flex-col">
                     <Input lista={cadastroAluno} className="md:w-[700px]"/>
                     <div className="flex flex-col mt-5">
-                        <label htmlFor="">Campi</label>
-                        <Select lista={Campi} placeholder="Selecione o campi do aluno" className="md:w-[700px]"/>
+                        <label htmlFor="select_campi_aluno">Campi</label>
+                        <Select id="select_campi_aluno" lista={Campi} placeholder="Selecione o campi do aluno" className="md:w-[700px]"/>
                     </div>
                     <div className="flex flex-col mt-5">
-                        <label htmlFor="">Ensino</label>
-                        <Select lista={Ensino} placeholder="Selecione seu grau de instrução" className="md:w-[700px]"/>
+                        <label htmlFor="select_ensino_aluno">Ensino</label>
+                        <Select id="select_ensino_aluno" lista={Ensino} placeholder="Selecione seu grau de instrução" className="md:w-[700px]"/>
                     </div>
                 </form>
             </div>

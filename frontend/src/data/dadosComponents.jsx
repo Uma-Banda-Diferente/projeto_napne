@@ -12,45 +12,56 @@ export const tipoDePerfil = [
 export const inputLogin = [
     { 
         nome: 'Email', 
-        tipo: 'email' },
+        tipo: 'email',
+        id: 'email_login' 
+    },
     { 
         nome: 'Senha', 
-        tipo: 'password' 
+        tipo: 'password',
+        id: 'senha_login' 
     }
 ];
 
 export const cadastroAluno = [
     { 
         nome: 'Nome', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'nome_aluno' 
     },
     { 
         nome: 'Matrícula', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'matricula_aluno' 
     },
     { 
         nome: 'Diagnóstico', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'diagnostico_aluno' 
     },
     { 
         nome: 'Acompanhamento/Medicação', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'acompanhamento_aluno' 
     },
     { 
         nome: 'Especificidades', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'especificidades_aluno' 
     },
     { 
         nome: 'Recomendações', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'recomendacoes_aluno' 
     },
     { 
         nome: 'Curso', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'curso_aluno' 
     },
     { 
         nome: 'Nome do Responsável', 
-        tipo: 'text' 
+        tipo: 'text',
+        id: 'responsavel_aluno' 
     }
 ];
 
