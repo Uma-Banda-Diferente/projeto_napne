@@ -11,13 +11,13 @@ export function Login () {
         <main className="flex-1 mx-auto px-4 py-6 justify-center">
             <div className="flex relative h-130 md:h-full w-120 md:w-260 bg-white rounded-xl top-2">
                 <SobreposicaoImagens/>
-                <div className="relative top-10 ml-8 mr-8">
+                <div className="relative w-120 top-10 ml-8 mr-8">
                     <div className="flex gap-4 justify-center items-center relative right-24 md:right-[135px] mb-10">
                         <img src={simboloEntrar} alt="Simbolo de acesso ao sistema" className="w-12"/>
                         <p className="text-xl font-semibold">Acessar o sistema</p>
                     </div>
-                    <Select lista={tipoDePerfil} placeholder="Selecione o tipo de perfil para entrar" className="md:w-120"/>
-                    <Input lista={inputLogin} className="w-[700px]"/>
+                    <Select lista={tipoDePerfil} placeholder="Selecione o tipo de perfil para entrar" tamanho="md:w-[480px]"/>
+                    <Input lista={inputLogin} tamanho="w-[480px]"/>
                     <div className="flex justify-center mt-8">
                         <button className="bg-[#24a838] text-white text-lg font-semibold w-70 p-2 mt-5 rounded-full cursor-pointer">Entrar</button>
                     </div>

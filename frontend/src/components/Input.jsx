@@ -34,11 +34,13 @@ export function Input({ lista, tamanho }) {
                     <textarea id={item.id} rows="1" onInput={ajustarAltura} className="overflow-hidden resize-none w-full appearance-none border border-gray-300 rounded-lg p-3 pl-3 outline-none"/>
                 </div>
             ) : item.tipo === "password" ? (
-                <div key={item.id} className={`flex flex-col w-full mt-5 ${tamanho}`}>
+                <div key={item.id} className={`flex flex-col w-full mt-5 md:${tamanho}`}>
                     <label htmlFor={item.id} className="mb-1 font-medium text-gray-700">{item.nome}</label>
-                    <input type={mostrarVisivel ? "text" : "password"} id={item.id} className="w-105 md:w-120 h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
-                    <div onClick={mostrarSenha} className="cursor-pointer">
-                        <img src={mostrarVisivel ? olhoFechado : olhoSenha} alt="Mostrar senha" className="w-8 relative left-[380px] md:left-[435px] bottom-[40px]"/>
+                    <div className="relative w-full">
+                        <input type={mostrarVisivel ? "text" : "password"} id={item.id} className="w-full h-12 border border-gray-300 rounded-lg p-2 pl-3"/>
+                        <div onClick={mostrarSenha} className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer flex items-center">
+                            <img src={mostrarVisivel ? olhoFechado : olhoSenha} alt="Mostrar senha" className="bg-white w-8 h-8"/>
+                        </div>
                     </div>
                 </div>
             ) : item.tipo === "file" ? (

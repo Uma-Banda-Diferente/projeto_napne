@@ -36,7 +36,7 @@ export function CadastroAluno() {
                             </div>
                             <Input lista={cadastroAlunoUltimoInput} tamanho="md:w-[360px]"/>
                             <div className="flex justify-center relative top-[160px] left-2 md:top-14 md:left-12">
-                                <button className="bg-[#24a838] text-white text-lg font-semibold w-80 p-3 rounded-full cursor-pointer">Cadastrar</button>
+                                <button className="bg-[#24a838] text-white text-lg font-semibold w-80 p-3 rounded-full cursor-pointer mb-20 md:mb-2">Cadastrar</button>
                             </div>
                         </div>
                     </div>

@@ -11,9 +11,9 @@ export const tipoDePerfil = [
 
 export const inputLogin = [
     { 
-        nome: 'Email', 
-        tipo: 'email',
-        id: 'email_login' 
+        nome: 'Matrícula', 
+        tipo: 'text',
+        id: 'matricula_login' 
     },
     { 
         nome: 'Senha', 
