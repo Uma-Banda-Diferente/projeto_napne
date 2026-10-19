@@ -57,11 +57,37 @@ export const cadastroAluno = [
         nome: 'Curso', 
         tipo: 'text',
         id: 'curso_aluno' 
-    },
+    }
+];
+
+export const cadastroAlunoContinuacao = [
     { 
         nome: 'Nome do Responsável', 
         tipo: 'text',
         id: 'responsavel_aluno' 
+    },
+    {
+        nome: 'Termo de Autorização',
+        legenda: '+ Adicionar termo', 
+        tipo: 'file',
+        id: 'termo_aluno' 
+    }
+];
+
+export const cadastroAlunoMaterial = [
+    {
+        nome: '',
+        legenda: '+ Adicionar material', 
+        tipo: 'file',
+        id: 'material_aluno' 
+    }
+];
+
+export const cadastroAlunoUltimoInput = [
+    {
+        nome: 'N° Processo',
+        tipo: 'text',
+        id: 'numero_processo_aluno'
     }
 ];
 
