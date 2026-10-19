@@ -93,8 +93,12 @@ export const cadastroAlunoUltimoInput = [
 
 export const Campi = [
     {
-        nome: 'Facul',
-        valor: 'facul'
+        nome: 'Campus Cajazeiras',
+        valor: 'campus_cajazeiras'
+    },
+    {
+        nome: 'Campus Areias',
+        valor: 'campus_areias'
     }
 ];
 
@@ -122,5 +126,31 @@ export const Ensino = [
     {
         nome: 'Ensino Superior Completo',
         valor: 'ensino_superior_comp',
+    }
+];
+
+export const cadastroInputProfessor = [
+    {
+        nome: 'Nome',
+        tipo: 'text',
+        id: 'nome_professor'
+    }
+];
+
+export const cadastroInputProfessorContinuacao = [
+    {
+        nome: 'Matrícula',
+        tipo: 'text',
+        id: 'matricula_professor'
+    },
+    {
+        nome: 'Senha',
+        tipo: 'password',
+        id: 'senha_professor'
+    },
+    {
+        nome: 'Confirme Senha',
+        tipo: 'password',
+        id: 'senha_confirme_professor'
     }
 ];
