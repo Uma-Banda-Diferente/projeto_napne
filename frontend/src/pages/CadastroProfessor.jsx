@@ -3,6 +3,7 @@ import { Select } from "../components/Select";
 import { Input } from "../components/Input";
 import iconAdd from "../assets/iconAdd.png";
 import { Campi, cadastroInputProfessor, cadastroInputProfessorContinuacao } from "../data/dadosComponents.jsx";
+import InputFotoPerfil from "../components/InputFotoPerfil.jsx";
 
 export function CadastroProfessor() {
     return(
@@ -14,12 +15,19 @@ export function CadastroProfessor() {
                     <h2 className="text-lg font-semibold">Insira os dados do professor</h2>
                 </div>
                 <form className="flex flex-col">
-                    <Input lista={cadastroInputProfessor} tamanho="md:w-[700px]"/>
-                    <div className="flex flex-col mt-5">
-                        <label htmlFor="select_campi_professor" className="mb-1 font-medium text-gray-700">Campi</label>
-                        <Select id="select_campi_professor" lista={Campi} placeholder="Selecione o campi do professor" tamanho="md:w-[700px]"/>
+                    <div className="flex">
+                    <div className="flex flex-col">
+                        <Input lista={cadastroInputProfessor} tamanho="md:w-[700px]"/>
+                        <div className="flex flex-col mt-5">
+                            <label htmlFor="select_campi_professor" className="mb-1 font-medium text-gray-700">Campi</label>
+                            <Select id="select_campi_professor" lista={Campi} placeholder="Selecione o campi do professor" tamanho="md:w-[700px]"/>
+                        </div>
+                        <Input lista={cadastroInputProfessorContinuacao} tamanho="md:w-[700px]"/>
                     </div>
-                    <Input lista={cadastroInputProfessorContinuacao} tamanho="md:w-[700px]"/>
+                    <div className="relative md:left-16 md:bottom-[140px]">                
+                        <InputFotoPerfil/>
+                    </div>
+                    </div>
                     <div className="flex justify-center relative mt-6">
                         <button className="bg-[#24a838] text-white text-lg font-semibold w-80 p-3 rounded-full cursor-pointer relative top-4 md:left-[400px] md:top-4">Cadastrar</button>
                     </div>
