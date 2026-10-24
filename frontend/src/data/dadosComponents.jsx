@@ -78,7 +78,7 @@ export const cadastroAlunoMaterial = [
     {
         nome: '',
         legenda: '+ Adicionar material', 
-        tipo: 'file',
+        tipo: 'multiplos_arquivos',
         id: 'material_aluno' 
     }
 ];

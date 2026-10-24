@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import olhoSenha from "../assets/eye.png";
 import olhoFechado from "../assets/eye-closed.png";
+import { InputMultiplosArquivos } from "./InputMultiplosArquivos";
 
 function InputSenha({ item, tamanho }) {
     const [mostrarVisivel, setMostrarVisivel] = useState(false);
@@ -49,6 +50,8 @@ export function Input({ lista, tamanho }) {
                 </div>
             ) : item.tipo === "password" ? (
                 <InputSenha key={item.id} item={item} tamanho={tamanho} />
+            ) : item.tipo === "multiplos_arquivos" ? ( 
+                <InputMultiplosArquivos key={item.id} item={item} tamanho={tamanho} />
             ) : item.tipo === "file" ? (
                 <div key={item.id} className={`flex flex-col w-full mt-5`}>
                     <label htmlFor={item.id} className="mb-1 font-medium text-gray-700">{item.nome}</label>
