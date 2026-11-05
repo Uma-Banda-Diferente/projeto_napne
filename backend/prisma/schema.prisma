@@ -1,0 +1,106 @@
+datasource db {
+    provider = "mysql"
+    url = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ENUMS
+
+enum PerfilUsuario {
+    ADMINISTRADOR
+    PROFESSOR
+}
+
+enum Campi {
+    CAJAZEIRAS
+    AREIAS
+}
+
+enum Curso {
+    CIENCIA_COMPUTACAO
+    ENGENHARIA_AGRICOLA
+    SERVICO_SOCIAL
+    GEOGRAFIA
+    QUIMICA
+}
+
+enum NivelEnsino {
+    MEDIO
+    SUPERIOR
+}
+
+enum TipoMaterial {
+    LINK
+    ARQUIVO
+}
+
+
+// tabelas
+
+model MaterialApoio {
+    id String @id @default(uuid())
+    titulo String @db.VarChar(255)
+    tipo TipoMaterial
+    url String? @db.VarChar(500)
+    arquivoPath String? @db.VarChar(255)
+    criado_Em DateTime @default(now())
+
+    materiaisAluno AlunoMaterial[]
+    @@map("material_apoio")
+}
+
+model AlunoMaterial {
+    id String @id @default(uuid())
+
+    material_id String
+    material MaterialApoio @relation(fields: [material_id], references: [id])
+
+    aluno_id String 
+    aluno Aluno @relation(fields: [aluno_id], references: [id])
+
+    criado_Em DateTime @default(now())
+    
+    @@map("aluno_material")
+}
+
+model Aluno {
+    id String @id @default(uuid())
+    nome String @db.VarChar(255)
+    matricula String @unique @db.VarChar(14)
+    diagnostico String @db.VarChar(255)
+    acompanhamento String @db.VarChar(255)
+    especificidade String @db.VarChar(255)
+    recomendacoes String @db.VarChar(255)
+    campi Campi
+    curso Curso
+    responsavel String @db.VarChar(255)
+    processo_sei String @db.VarChar(100)
+    termoPath String? @db.VarChar(255)
+    cadastrado_por String
+    cadastroPor Usuario @relation(fields: [cadastrado_por], references: [id])
+    criado_Em DateTime @default(now())
+
+    materiaisAluno AlunoMaterial[]
+    @@map("alunos")
+}
+
+model Usuario {
+    id String @id @default(uuid())
+    nome String @db.VarChar(255)
+    email String @unique @db.VarChar(255)
+    senha String @db.VarChar(255)
+    perfil PerfilUsuario
+
+    cadastrado_por String?
+    cadastroPor Usuario? @relation("UsuariosCadastros", fields: [cadastrado_por], references: [id])
+
+    usuariosCadastrados Usuario[] @relation("UsuariosCadastros")
+
+    criado_Em DateTime @default(now())
+
+    alunosCadastrados Aluno[] 
+    @@map("usuarios")
+}
