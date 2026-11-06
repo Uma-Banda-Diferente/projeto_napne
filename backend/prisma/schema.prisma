@@ -81,6 +81,7 @@ model Aluno {
     termoPath String? @db.VarChar(255)
     cadastrado_por String
     cadastroPor Usuario @relation(fields: [cadastrado_por], references: [id])
+    nivel_ensino NivelEnsino
     criado_Em DateTime @default(now())
 
     materiaisAluno AlunoMaterial[]
